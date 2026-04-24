@@ -1,5 +1,21 @@
 services:
-  postgres:
+  finance-api:
+    build:
+      context: ./backend
+      dockerfile: src/FinanceOptimizer.Api/Dockerfile
+    container_name: financeoptimizer-api
+    restart: unless-stopped
+    ports:
+      - "5000:8080"
+    environment:
+      ASPNETCORE_URLS: http://+:8080
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Postgres: Host=finance-postgres;Port=5432;Database=financeoptimizer;Username=finance;Password=finance_password
+    depends_on:
+      finance-postgres:
+        condition: service_healthy
+
+  finance-postgres:
     image: postgres:17
     container_name: financeoptimizer-postgres
     restart: unless-stopped
