@@ -1,0 +1,12 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path="appsettings.Development.json" />
+    <File Path="docker-compose.yml" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/FinanceOptimizer.Api/FinanceOptimizer.Api.csproj" />
+    <Project Path="src/FinanceOptimizer.Application/FinanceOptimizer.Application.csproj" />
+    <Project Path="src/FinanceOptimizer.Domain/FinanceOptimizer.Domain.csproj" />
+    <Project Path="src/FinanceOptimizer.Infrastructure/FinanceOptimizer.Infrastructure.csproj" />
+  </Folder>
+</Solution>

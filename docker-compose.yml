@@ -1,0 +1,21 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: financeoptimizer-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: financeoptimizer
+      POSTGRES_USER: finance
+      POSTGRES_PASSWORD: finance_password
+    ports:
+      - "5432:5432"
+    volumes:
+      - financeoptimizer_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U finance -d financeoptimizer"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+volumes:
+  financeoptimizer_postgres_data:
