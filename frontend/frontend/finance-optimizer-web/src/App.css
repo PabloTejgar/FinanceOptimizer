@@ -1,0 +1,88 @@
+.page {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: system-ui, sans-serif;
+}
+
+.card {
+  background: #ffffff;
+  border: 1px solid #dddddd;
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 24px;
+}
+
+.subtitle {
+  color: #666666;
+}
+
+.form {
+  display: grid;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+label {
+  display: grid;
+  gap: 6px;
+  font-weight: 600;
+}
+
+input {
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  font: inherit;
+}
+
+button {
+  padding: 12px 16px;
+  border: 0;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled {
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.errors {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid #cc0000;
+  border-radius: 8px;
+}
+
+.errors p {
+  margin: 0;
+  color: #cc0000;
+}
+
+.transactions {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.transactions li {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 12px;
+  border: 1px solid #eeeeee;
+  border-radius: 8px;
+}
+
+.transactions span {
+  display: block;
+  color: #666666;
+  font-size: 0.9rem;
+}
+
+.empty {
+  color: #666666;
+}
